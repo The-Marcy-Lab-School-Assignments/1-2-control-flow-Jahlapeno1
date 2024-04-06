@@ -12,8 +12,35 @@ const measureRain = (inches) => {
   }
 };
 
-const happyBirthdayPet = () => {
+const happyBirthdayPet = (breed, age) => {
+  if (breed === 'snake') {
+    console.log('Hiss hiss!')
+  } else if (breed === 'cat') {
+    if (age < 5) {
+      console.log('Mew mew!')
+    } else {
+      console.log('Meow meow!')
+    }
+  } else if (breed === 'dog') {
+    if (age < 5) {
+      console.log('Arf arf!')
+    } else if (age >= 5 && age < 10) {
+      console.log('Woof woof!')
+    } else {
+      console.log('Boof!')
+    }
+  } else {
+    console.log('Happy birthday!')
+  }
 };
+
+// happyBirthdayPet('snake', 4)
+// happyBirthdayPet('cat', 4)
+// happyBirthdayPet('cat', 5)
+// happyBirthdayPet('dog', 4)
+// happyBirthdayPet('dog', 5)
+// happyBirthdayPet('dog', 10)
+// happyBirthdayPet('zebra', 10)
 
 const funTypes = () => {
 };
