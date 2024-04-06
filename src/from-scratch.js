@@ -68,9 +68,16 @@ const funTypes = jsType => {
   }
 };
 
-funTypes(NaN)
+// funTypes(NaN)
 
-const rounder = () => {
+const rounder = (float, roundingSetting) => {
+  if (roundingSetting === 'up') {
+    return Math.ceil(float)
+  } else if (roundingSetting === 'down') {
+    return Math.floor(float)
+  } else if (roundingSetting === 'honest') {
+    return Math.round(float)
+  }
 };
 
 const fizzBuzzish = () => {
