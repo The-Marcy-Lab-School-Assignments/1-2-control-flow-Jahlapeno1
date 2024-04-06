@@ -22,14 +22,18 @@ const funkoPopAddictionLevel = (numOfFunkoPops) => {
 };
 
 const getWeatherReport = (temperature) => {
+  let weatherReport = ""
   if (temperature > 90) {
-    const weatherReport = "It's hot and gross out.";
+    weatherReport = "It's hot and gross out.";
     console.log(weatherReport);
   } else if (temperature > 70) {
-    const weatherReport = "At least it's a dry heat.";
+    weatherReport = "At least it's a dry heat.";
     console.log(weatherReport);
-  } else if (temperature < 32) {
-    const weatherReport = "Wow, it's cold out.";
+  } else if (temperature > 31) {
+    weatherReport = "It's not too bad!"
+    console.log(weatherReport)
+  } else if (temperature <= 31) {
+    weatherReport = "Wow, it's cold out.";
     console.log(weatherReport);
   }
   console.log("And that's your report!");
