@@ -42,8 +42,33 @@ const happyBirthdayPet = (breed, age) => {
 // happyBirthdayPet('dog', 10)
 // happyBirthdayPet('zebra', 10)
 
-const funTypes = () => {
+const funTypes = jsType => {
+  if (typeof jsType === 'string') {
+    console.log("That's just some text.");
+  } else if (typeof jsType === 'number') {
+    // since NaN is technically a number data type according to 'typeof' than another if statement is needed
+    if (isNaN(jsType)) {
+      console.log("Well, now you're just showing off.");
+    } else {
+      console.log("That's a good number.");
+    }
+  } else if (typeof jsType === 'boolean') {
+    console.log("To bool, or not to bool?");
+  } else if (typeof jsType === 'undefined') {
+    console.log("Nothing, but I didn't set that.");
+  } else if (typeof jsType === 'object') {
+    // since null and arrays count as objects, I put another if else statement inside to filter them out
+    if (jsType === null) {
+      console.log("Nothing, and I did set that.");
+    } else if (Array.isArray(jsType)) {
+      console.log("I order you to be indexed.");
+    } else {
+      console.log("Anybody got the key?");
+    }
+  }
 };
+
+funTypes(NaN)
 
 const rounder = () => {
 };
