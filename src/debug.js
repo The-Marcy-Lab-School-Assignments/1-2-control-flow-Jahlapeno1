@@ -1,5 +1,6 @@
 const getRandomIntInRange = (min, max) => {
   if (min > max) throw new Error('min must be less than max');
+  /** FEEDBACK: Google how to get a ranged random number for this question! */
   return Math.floor(Math.random() * max);
 };
 
@@ -39,7 +40,7 @@ const getWeatherReport = (temperature) => {
   console.log("And that's your report!");
   return weatherReport;
 };
-
+/** FEEDBACK: Refactor this so that it uses at most only one ternary! */
 const returnPositiveNegativeZero = (num) => {
   return num < 0
     ? "Positive"
